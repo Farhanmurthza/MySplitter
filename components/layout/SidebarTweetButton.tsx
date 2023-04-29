@@ -7,8 +7,8 @@ const SidebarTweetButton = () => {
   const router = useRouter();
   const loginModal = useLoginModal();
   const onClickTweet = useCallback(() => {
-    loginModal.onOpen();
-  }, [loginModal]);
+    router.push('/')
+  }, [router]);
   return (
     <div onClick={onClickTweet}>
       <div className="mt-6 lg:hidden rounded-full h-14 w-14 p-4 flex items-center justify-center bg-sky-500 hover:bg-opacity-80 transition cursor-pointer">
